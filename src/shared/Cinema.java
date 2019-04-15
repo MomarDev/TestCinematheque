@@ -10,25 +10,37 @@ import java.util.*;
 
 /** @pdOid 29ea2295-0610-4890-a971-141c45bcc53f */
 public class Cinema {
-   /** @pdOid a5e0b264-ff10-45ee-9ec6-2828d46e070e */
    public int idCinema;
-   /** @pdOid c1702eca-96fa-4201-b25d-d5060fbfd240 */
    public String nom;
-   /** @pdOid fd7a07f9-8190-4197-87e8-b1aaed113605 */
    public String adresse;
-   /** @pdOid 67a27f02-1707-4374-92f5-4f10cc105760 */
-   public String telephone;
-   
-   /** @pdRoleInfo migr=no name=Salle assc=Association_7 coll=java.util.List impl=java.util.ArrayList mult=0..* type=Composition */
-   public java.util.List<Salle> salle;
+   public String telephone;public java.util.List<Salle> salle;
    
    
-   /** @pdGenerated default getter */
-   public java.util.List<Salle> getSalle() {
+   
+   public Cinema() {}
+   
+
+
+
+public Cinema(int idCinema, String nom, String adresse, String telephone, List<Salle> salle) {
+	super();
+	this.idCinema = idCinema;
+	this.nom = nom;
+	this.adresse = adresse;
+	this.telephone = telephone;
+	this.salle = salle;
+}
+
+
+
+
+public java.util.List<Salle> getSalle() {
       if (salle == null)
          salle = new java.util.ArrayList<Salle>();
       return salle;
    }
+   
+   
    
    /** @pdGenerated default iterator getter */
    public java.util.Iterator getIteratorSalle() {
@@ -45,7 +57,63 @@ public class Cinema {
          addSalle((Salle)iter.next());
    }
    
-   /** @pdGenerated default add
+   public int getIdCinema() {
+	return idCinema;
+}
+
+
+
+
+public void setIdCinema(int idCinema) {
+	this.idCinema = idCinema;
+}
+
+
+
+
+public String getNom() {
+	return nom;
+}
+
+
+
+
+public void setNom(String nom) {
+	this.nom = nom;
+}
+
+
+
+
+public String getAdresse() {
+	return adresse;
+}
+
+
+
+
+public void setAdresse(String adresse) {
+	this.adresse = adresse;
+}
+
+
+
+
+public String getTelephone() {
+	return telephone;
+}
+
+
+
+
+public void setTelephone(String telephone) {
+	this.telephone = telephone;
+}
+
+
+
+
+/** @pdGenerated default add
      * @param newSalle */
    public void addSalle(Salle newSalle) {
       if (newSalle == null)
