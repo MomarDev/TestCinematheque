@@ -48,7 +48,7 @@ public class ActeurControl {
    public static void ajouterNouveau(Acteur acteur) {
       // TODO: implement
 	   if(!ActeurModel.addActeur(acteur)) {
-		   JMain.affcherErreur("Erreur lors de l'ajout! ");
+		   JMain.afficherErreur("Erreur lors de l'ajout! ");
 	   }
 	   else {
 		   lister();
@@ -60,7 +60,7 @@ public class ActeurControl {
     * @pdOid f40763a7-f595-41f4-a1a8-4b13ba20bccf */
    public static void enregistrerModification(Acteur acteur) {
 		   if(!ActeurModel.modifyActeur(acteur)) {
-			   JMain.affcherErreur("Erreur lors de la modification ");
+			   JMain.afficherErreur("Erreur lors de la modification ");
 		   }
 		   else {
 			   lister();
@@ -73,10 +73,10 @@ public class ActeurControl {
 
 
 	   if(!ActeurModel.deleteActeur(acteur)) {
-		   JMain.affcherErreur("Erreur lors de la suppression ");
+		   JMain.afficherErreur("Erreur lors de la suppression ");
 	   }
 	   else {
-		   JMain.affcherInformation("Suppression reussie ");
+		   JMain.afficherInformation("Suppression reussie ");
 	   }
    }
    
